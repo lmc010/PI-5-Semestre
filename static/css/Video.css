@@ -1,3 +1,4 @@
+
 body {
   background-image: #f2f2f2;
   font-family: "Roboto", sans-serif;
@@ -12,7 +13,7 @@ body {
 
 .navbar {
   display: flex;
-  width: 100%;
+  width: 1243px;
   background-color: #d926d9;
   justify-content: space-around;
   padding: 10px;
@@ -55,12 +56,15 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 15%;
+  width: 210px;
   height: 100%;
   padding: 20px;
 }
 .logoMenu {
-  width: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: 12px;
+  margin-left: 52px;
 }
 
 ul {
@@ -72,23 +76,26 @@ ul {
 li {
   text-decoration: none;
   list-style-type: none;
-  margin-bottom: 30px;
+  margin-top: -32px;
+  margin-bottom: 35px;
   width: 100%;
 }
 
 
 li a {
-  font-size: 20px;
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: #fff;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    width: 215px;
+    text-decoration: none;
+    color: #fff;
 }
 
 li :hover {
   background-color: #952b95;
   color: white;
-  width: 100%;
+  width: 202px;
+  
 }
 #check:checked ~ .sidebarMenu {
   left: 0;
@@ -102,6 +109,13 @@ li :hover {
 .open-menu {
   display: flex;
   align-items: center;
+}
+
+.close img{
+  width: 45px;
+  margin-top: 90px;
+  margin-left: 170px;
+  cursor: pointer;
 }
 
 /* video */
@@ -121,7 +135,6 @@ li :hover {
 
 .sidebarMenuvideo {
   background-image: linear-gradient(rgb(214, 77, 238), #845bf4);
-
   width: 320px;
   height: 343px;
   border-radius: 10px;
@@ -175,15 +188,24 @@ li :hover {
 }
 
 
+.sidebarMenuvideo a{
+  margin-left:-40px;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.sidebarMenuvideo a:hover{
+  width: 530px;
+}
+
 .sidebarMenuvideo .nav-item a {
   font-size: 15px;
- 
   font-size: 15px;
 }
 
 .playlistVideo label img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 .menu-video .playlist {
@@ -463,7 +485,7 @@ footer {
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-
+  margin-left: 20px;
   display: flex;
   flex: row wrap;
 }
@@ -471,6 +493,7 @@ footer {
 .iconMessage {
   width: 50px;
   height: 50px;
+  margin-left: -23px;
   cursor: pointer;
   display: flex;
   flex: row wrap;
@@ -479,7 +502,7 @@ footer {
 .iconWhatsapp {
   width: 50px;
   height: 50px;
-
+  margin-left: -73px;
   cursor: pointer;
   display: flex;
   flex: row wrap;
@@ -488,6 +511,7 @@ footer {
 .footerThreeh2 {
   color: #ffffff;
   font-size: 15px;
+  margin-left: 20px;
   font-weight: bold;
   display: flex;
   flex: row wrap;
@@ -496,6 +520,7 @@ footer {
 .iconInstagram {
   width: 50px;
   height: 50px;
+  margin-left: -3px;
   cursor: pointer;
   display: flex;
   flex: row wrap;
@@ -504,6 +529,7 @@ footer {
 .iconYoutube {
   width: 50px;
   height: 50px;
+  margin-left: -23px;
   cursor: pointer;
   display: flex;
   flex: row wrap;

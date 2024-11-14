@@ -147,60 +147,6 @@ li a:hover{
 }
 
 
-
-/*
-
-.icon-navbar{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-top: -20px;
-}
-
-.icon-navbar:hover{
-    transform: scale(1.2);
-    transition: ease 1s;
-}
-
-.nav-item{
-    padding: 3px;
-}
-
-.nav-item:hover{
-    background-color: #952B95;
-}
-
-.navbar-nav a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 20px;
-    padding-bottom: 30px;
-}
-
-.navbar-nav a:hover{
-    color: #fff;
-}
-
-
-
-
-.navbar-nav {
-   background-color: #fff;
-   border-bottom: 1px solid black;
-   margin-left: 1051px;
-   margin-top: -30px;
-   border-left: none;
-   border-bottom: none;
-   width: 200px;
-   height: 220px;
-   position:absolute;
-   border-top-left-radius: 15px;
-   border-bottom-left-radius: 15px;
-}
-
-*/
-
-
 .iconUser{
     width: 400px;
     height: 200px;

@@ -8,7 +8,7 @@ body{
     color: #F2F2F2;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 750px;
+    margin-left: 1000px;
     margin-top: -25px;
     text-decoration: none;
     cursor: pointer;
@@ -18,7 +18,7 @@ body{
 .cadastrar{
     color: #F2F2F2;
     font-size: 20px;
-    margin-left: 850px;
+    margin-left: 1090px;
     margin-top: -25px;
     font-weight: bold;
     text-decoration: none;
@@ -54,8 +54,8 @@ body{
     width: 350px;
     height: 30px;
     border-radius: 10px;
-    margin-left: 300px;
-    margin-top: 25px;
+    margin-left: 400px;
+    margin-top: 12px;
     border: 2px solid #ffffff;
     background-color: #F2F2F2;
     opacity: 0.50;
@@ -71,7 +71,7 @@ body{
 .magnifyingGlass{
     width: 20px;
     height: 20px;
-    margin-left: 620px;
+    margin-left: 720px;
     margin-top: -25px;
     display: flex;
     flex: row wrap;
@@ -86,101 +86,45 @@ body{
     cursor: pointer;
 }
 
-.sidebarMenu{
-    background-image:linear-gradient(rgb(214, 77, 238),#845bf4);
-    margin-top: -25px;
-    width: 250px;
-    left: -250px;
-    height: 620px;
+
+
+.sidebar {
     position: absolute;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    
-}
-
-label{
-    padding: 15px;
-    position: absolute;
-    cursor: pointer;
-}
-
-label img{
-    width: 50px;
-    height: 50px;
-}
-
-input[type="checkbox"]
-{
-    display: none;
-}
-
-
-.menuIcon{
-    margin-top: -40px;
-    margin-left: 30px;
-    
-}
-
-.menuIcon label{
-    background-color: #D926D9;
-    border-radius: 5px;
-}
-
-.sidebarMenu .logo{
-    width: 80px;
-    height: 80px;
-    margin-top: 45px;
-}
-
-.sidebarMenu img{
-     margin-top: -500px;
-     width: 60px;
-     margin-left: 40px;
-}
-
-
-li{
-    text-decoration: none;
-    list-style-type: none;
-    
-}
-
-ul{
-    top:120px;
-    position:absolute;
-    text-decoration: none;
-    
-}
-
-
-
-li a{
-    font-size: 16px;
-    display: block;
-    padding: 10px;
-    width: 215px;
-    text-decoration: none;
-    color: #fff;
-    
-}
-
-label h1{
-    color: #000000;
-    position: relative;
-}
-
-li a:hover{
-    background-color: #952B95;
-    color: white;
-    width: 217px;
-}
-#check:checked ~ .sidebarMenu{
+    top: 100px;
     left: 0;
+    width: 200px;
+    height: 498px;
+    background-image:linear-gradient(rgb(214, 77, 238),#845bf4);
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 5px 0;
 }
 
-.close{
-    margin-left: 100px;
-    margin-top: 360px;
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom:5px ;
+}
+
+.sidebar a:hover {
+    color: #ccc;
 }
 
 
@@ -195,24 +139,139 @@ li a:hover{
 
 
 
+
+.banner img{
+   width:350px ;
+   height:350px;
+   margin-left: 900px;
+}
 
 .apresentacao{
     background-color: #ffffff;
-    margin-top: -380px;
+    margin-top: -330px;
+    margin-left: 110px;
 }
 
 .apresentacao h1{
     font-size: 50px;
     color: #952B95;  
-    margin-left: 80px; 
+    margin-left: 150px; 
 }
 
 .apresentacao p{
-    font-size: 20px;
-    margin-left: 40px;
+    font-size: 18px;
+    margin-left: 150px;
     color: #7878FF;
 }
 
+
+.questionMark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #D926D9;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 755px;
+    margin-top: -35px;
+    transition: transform 0.3s ease;
+  }
+
+  .hardSkillsBox{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin-top: 540px;
+    margin-left: 350px;
+    width: 80%;
+    font-size: 1.2em;
+    color: #333;
+    z-index: 100;
+    text-align: justify;
+  }
+
+  .questionMark:hover + .hardSkillsBox {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .questionMarkTwo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #D926D9;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 745px;
+    margin-top: -35px;
+    transition: transform 0.3s ease;
+  }
+
+  .softSkillsBox {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin-top: 850px;
+    margin-left: 350px;
+    width: 80%;
+    font-size: 1.2em;
+    color: #333;
+    z-index: 100;
+    text-align: justify;
+  }
+
+  
+  .questionMarkTwo:hover + .softSkillsBox {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 
 
 .buttonHardSkillsOne{
@@ -715,12 +774,13 @@ li a:hover{
 .cardOne{
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    border: 2px solid #952B95;
+    border: 1px solid #952B95;
     text-align: center;
     margin: 15px;
     width: 300px;
     height: 420px;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 
@@ -759,6 +819,7 @@ li a:hover{
     color: #7878FF;
     cursor: pointer;
 }
+
 
 .cardTextTwo p {
     color: #952B95;
@@ -825,12 +886,13 @@ li a:hover{
 .cardTwo{
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    border: 2px solid #952B95;
+    border: 1px solid #952B95;
     text-align: center;
     margin: 15px;
     width: 300px;
     height: 420px;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 
@@ -865,9 +927,10 @@ li a:hover{
     margin: 15px;
     background-color: #ffffff;
     width: 300px;
-    border: 2px solid #952B95;
+    border: 1px solid #952B95;
     height: 420px;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 
@@ -913,9 +976,10 @@ li a:hover{
     margin: 15px;
     background-color: #ffffff;
     width: 300px;
-    border: 2px solid #952B95;
+    border: 1px solid #952B95;
     height: 420px;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 
@@ -950,9 +1014,10 @@ li a:hover{
     margin: 15px;
     background-color: #ffffff;
     width: 300px;
-    border: 2px solid #952B95;
+    border: 1px solid #952B95;
     height: 420px;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 
@@ -985,9 +1050,10 @@ li a:hover{
     margin: 15px;
     background-color: #ffffff;
     width: 300px;
-    border: 2px solid #952B95;
+    border: 1px solid #952B95;
     height: 420px;
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 
@@ -1166,6 +1232,7 @@ li a:hover{
     width: 850px;
     padding-top: 5px;
     padding-bottom: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 .divReact:hover{
@@ -1353,6 +1420,7 @@ li a:hover{
     width: 850px;
     padding-top: 30px;
     padding-bottom: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 
@@ -1557,8 +1625,8 @@ footer{
 .footerThreeh2{
     color: #ffffff;
     font-size: 15px;
-    margin-top: -70px;
-    margin-left: -105px;
+    margin-top: -90px;
+    margin-left: -110px;
     font-weight: bold;
     display: flex;
     flex: row wrap;
@@ -1567,7 +1635,7 @@ footer{
 .iconInstagram{
     width: 50px;
     height: 50px;
-    margin-left:-115px;
+    margin-left:-120px;
     cursor: pointer;
     display: flex;
     flex: row wrap;
@@ -1577,7 +1645,7 @@ footer{
 .iconYoutube{
     width: 50px;
     height: 50px;
-    margin-left: -50px;
+    margin-left: -55px;
     margin-top: -50px;
     cursor: pointer;
     display: flex;
@@ -1589,6 +1657,7 @@ footer{
     color: #ffffff;
     font-size: 15px;
     margin-left: 80px;
+    margin-top: 15px;
     font-weight: bold;
     display: flex;
     flex: row wrap;
