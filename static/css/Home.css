@@ -127,8 +127,11 @@ body{
     color: #ccc;
 }
 
-
-
+.sidebar li:hover{
+    background-color: #952B95;
+    width: 180px;
+    cursor: pointer;
+}
 
 
 
