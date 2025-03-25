@@ -10,38 +10,35 @@
 }
 
 /* Estilos Globais */
-body {
+/* body {
   background-color: var(--background-color);
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-}
+} */
 
-/* Header e Navbar */
 /* Header e Navbar */
 .navbar {
   background-color: var(--secondary-color);
   padding: 10px 20px;
   width: 100%;
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  justify-content: center;
 }
 
 .posi-navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around; /* Espaço entre os elementos */
+  justify-content: space-around;
   gap: 20px;
-  width: 100%; /* Ocupa a largura total do header */
+  width: 100%;
 }
 
-/* Logo */
 .logo-navbar {
-  height: 50px; /* Ajuste conforme necessário */
+  height: 50px;
 }
 
-/* Input de pesquisa */
 .inputNavbar {
   flex-grow: 1;
   max-width: 300px;
@@ -58,7 +55,6 @@ body {
   outline: none;
 }
 
-/* Links de navegação */
 .nav-links {
   display: flex;
   gap: 15px;
@@ -80,6 +76,129 @@ body {
   background-color: var(--hover-color);
   border-radius: 5px;
 }
+
+/* Banner */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(to right, #d926d9, #7878ff);
+  color: white;
+  text-align: left;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.banner-image {
+  max-width: 250px;
+}
+
+.apresentacao {
+  max-width: 500px;
+}
+
+.apresentacao h1 span {
+  color: #FFD700;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #FFD700;
+  color: #1E3A8A;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #FFC107;
+}
+
+/* Trilhas */
+.skills {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.question-mark {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: #ddd;
+  margin: 30px 0;
+}
+
+/* Footer */
 .footer {
   background-color: var(--primary-color);
   color: var(--white);

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="static/css/Home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,34 +22,106 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
 
     <title>Home</title>
   </head>
 
   <body>
-    <header class="navbar">
-        <div class="posi-navbar">
-          <img src="static/imgs/Logo_liberty.svg" alt="Logo Liberty" class="logo-navbar" />
-      
-          <input
-            type="text"
-            name="search"
-            placeholder="Digite Aqui..."
-            class="inputNavbar"
-            aria-label="Buscar"
-          />
-      
-          <nav class="nav-links">
-            <a href="/login" class="login">Login</a>
-            <a href="/cadastro" class="cadastrar">Cadastrar-se</a>
-          </nav>
-        </div>
-      </header>
-      
-      
-      
+    {% include 'header.html' %}
 
-    <!-- <div class="banner">
+
+    <section class="banner">
+      <div class="banner-content">
+        <img
+          src="static/imgs/Image_22.svg"
+          alt="Liberty Cursos - Educação Online"
+          class="banner-image"
+        />
+        <article class="apresentacao">
+          <h1>
+            Explore um mundo de conhecimento com a <span>Liberty Cursos</span>
+          </h1>
+          <p>
+            Acesse uma ampla variedade de cursos online na área de
+            <strong>TI</strong>, ministrados por especialistas renomados. Nossa
+            plataforma permite que você aprenda no seu próprio ritmo, de onde
+            quiser.
+          </p>
+          <p>
+            Conecte-se a uma comunidade vibrante de alunos e dê o próximo passo
+            na sua jornada de aprendizado!
+          </p>
+          <a href="#cursos" class="cta-button">Explorar Cursos</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills">
+      <article class="hard-skills">
+        <h1 class="title">Trilha Hard Skills</h1>
+
+        <div class="icons">
+          <img src="static/imgs/Icon_html.svg" alt="HTML" class="icon" />
+          <button class="button">Frontend</button>
+          <img src="static/imgs/icon_php.svg" alt="PHP" class="icon" />
+          <button class="button">Backend</button>
+          <img src="static/imgs/Icon_devops.svg" alt="DevOps" class="icon" />
+          <button class="button">DevOps</button>
+          <img
+            src="static/imgs/Icon_database.svg"
+            alt="Banco de Dados"
+            class="icon"
+          />
+          <button class="button">Data Science</button>
+          <img src="static/imgs/icon_design.svg" alt="Design" class="icon" />
+          <button class="button">Design</button>
+        </div>
+      </article>
+
+      <hr />
+
+      <article class="soft-skills">
+        <h1 class="title">Trilha Soft Skills</h1>
+
+        <div class="icons">
+          <img
+            src="static/imgs/Icon_comunication.svg"
+            alt="Comunicação"
+            class="icon"
+          />
+          <button class="button">Comunicação</button>
+          <img
+            src="static/imgs/Icon_megaphone.svg"
+            alt="Oratória"
+            class="icon"
+          />
+
+          <button class="button">Oratória</button>
+          <img
+            src="static/imgs/Icon_HandShake.svg"
+            alt="Negociação"
+            class="icon"
+          />
+          <button class="button">Negociação</button>
+          <img
+            src="static/imgs/Icon_lamp.svg"
+            alt="Criatividade"
+            class="icon"
+          />
+          <button class="button">Criatividade</button>
+          <img
+            src="static/imgs/Icon_clock.svg"
+            alt="Produtividade"
+            class="icon"
+          />
+
+          <button class="button">Produtividade</button>
+        </div>
+      </article>
+    </section>
+<!-- <div class="banner">
       <img src="static/imgs/Image_22.svg" />
       <div class="apresentacao">
         <h1>Bem-vindo à Liberty Cursos</h1>
@@ -274,46 +346,7 @@
         <h4>Oferta de 84% de desconto</h4>
       </div>
     </div> -->
-    <footer class="footer">
-        <div class="footer-section">
-          <h1 class="footer-title">Tá com dúvida?</h1>
-          <nav>
-            <ul class="footer-links">
-              <li><a href="#">Quem somos?</a></li>
-            </ul>
-          </nav>
-          <img src="static/imgs/Logo_liberty.svg" alt="Logo Liberty" class="logo-footer" />
-        </div>
-      
-        <div class="footer-section">
-          <h1 class="footer-title">Quer saber mais?</h1>
-          <nav>
-            <ul class="footer-links">
-              <li><a href="#">Contato</a></li>
-              <li><a href="#">Trabalhe conosco</a></li>
-              <li><a href="#">Termos</a></li>
-              <li><a href="#">Política de privacidade</a></li>
-              <li><a href="#">Configurações de cookie</a></li>
-            </ul>
-          </nav>
-        </div>
-      
-        <div class="footer-section">
-          <h1 class="footer-title">Fale com a gente</h1>
-          <div class="footer-icons">
-            <a href="#"><img src="static/imgs/Icon_message.svg" alt="Mensagem" /></a>
-            <a href="#"><img src="static/imgs/Icon_whatsapp.svg" alt="WhatsApp" /></a>
-          </div>
-      
-          <h2 class="footer-subtitle">Nossas Redes</h2>
-          <div class="footer-social">
-            <a href="#"><img src="static/imgs/Icon_instagram.svg" alt="Instagram" /></a>
-            <a href="#"><img src="static/imgs/Icon_youtube.svg" alt="YouTube" /></a>
-          </div>
-      
-          <p class="footer-copy">© 2023 Liberty Cursos, Inc</p>
-        </div>
-      </footer>
-      
+    {% include 'footer.html' %}
+
   </body>
 </html>

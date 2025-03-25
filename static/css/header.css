@@ -1,0 +1,61 @@
+
+
+/* Header e Navbar */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .posi-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .logo-navbar {
+    height: 50px;
+  }
+  
+  .inputNavbar {
+    flex-grow: 1;
+    max-width: 300px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    background-color: var(--background-color);
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .inputNavbar:focus {
+    opacity: 1;
+    outline: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .login,
+  .cadastrar {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .login:hover,
+  .cadastrar:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+  }
