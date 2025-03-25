@@ -104,15 +104,15 @@
 }
 
 .apresentacao h1 span {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .cta-button {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background-color: #FFD700;
-  color: #1E3A8A;
+  background-color: #ffd700;
+  color: #1e3a8a;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
@@ -120,7 +120,7 @@
 }
 
 .cta-button:hover {
-  background-color: #FFC107;
+  background-color: #ffc107;
 }
 
 /* Trilhas */
@@ -131,6 +131,21 @@
   flex-direction: column;
 }
 
+.hard-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.soft-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.posi-icons{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+}
 .article {
   background: white;
   padding: 20px;
@@ -142,7 +157,7 @@
 .title {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #222;
+  color: var(--secondary-color);
 }
 
 .question-mark {
@@ -181,7 +196,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   font-size: 16px;
   transition: background 0.3s;

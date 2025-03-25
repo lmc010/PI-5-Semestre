@@ -22,15 +22,20 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/header.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
 
     <title>Home</title>
   </head>
 
   <body>
     {% include 'header.html' %}
-
 
     <section class="banner">
       <div class="banner-content">
@@ -63,20 +68,32 @@
         <h1 class="title">Trilha Hard Skills</h1>
 
         <div class="icons">
-          <img src="static/imgs/Icon_html.svg" alt="HTML" class="icon" />
-          <button class="button">Frontend</button>
-          <img src="static/imgs/icon_php.svg" alt="PHP" class="icon" />
-          <button class="button">Backend</button>
-          <img src="static/imgs/Icon_devops.svg" alt="DevOps" class="icon" />
-          <button class="button">DevOps</button>
-          <img
-            src="static/imgs/Icon_database.svg"
-            alt="Banco de Dados"
-            class="icon"
-          />
-          <button class="button">Data Science</button>
-          <img src="static/imgs/icon_design.svg" alt="Design" class="icon" />
-          <button class="button">Design</button>
+          <div class="posi-icons">
+            <img src="static/imgs/Icon_html.svg" alt="HTML" class="icon" />
+            <button class="button">Frontend</button>
+          </div>
+          <div class="posi-icons">
+            <img src="static/imgs/icon_php.svg" alt="PHP" class="icon" />
+            <button class="button">Backend</button>
+          </div>
+
+          <div class="posi-icons">
+            <img src="static/imgs/Icon_devops.svg" alt="DevOps" class="icon" />
+            <button class="button">DevOps</button>
+          </div>
+
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_database.svg"
+              alt="Banco de Dados"
+              class="icon"
+            />
+            <button class="button">Data Science</button>
+          </div>
+          <div class="posi-icons">
+            <img src="static/imgs/icon_design.svg" alt="Design" class="icon" />
+            <button class="button">Design</button>
+          </div>
         </div>
       </article>
 
@@ -86,42 +103,52 @@
         <h1 class="title">Trilha Soft Skills</h1>
 
         <div class="icons">
-          <img
-            src="static/imgs/Icon_comunication.svg"
-            alt="Comunicação"
-            class="icon"
-          />
-          <button class="button">Comunicação</button>
-          <img
-            src="static/imgs/Icon_megaphone.svg"
-            alt="Oratória"
-            class="icon"
-          />
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_comunication.svg"
+              alt="Comunicação"
+              class="icon"
+            />
+            <button class="button">Comunicação</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_megaphone.svg"
+              alt="Oratória"
+              class="icon"
+            />
 
-          <button class="button">Oratória</button>
-          <img
-            src="static/imgs/Icon_HandShake.svg"
-            alt="Negociação"
-            class="icon"
-          />
-          <button class="button">Negociação</button>
-          <img
-            src="static/imgs/Icon_lamp.svg"
-            alt="Criatividade"
-            class="icon"
-          />
-          <button class="button">Criatividade</button>
-          <img
-            src="static/imgs/Icon_clock.svg"
-            alt="Produtividade"
-            class="icon"
-          />
+            <button class="button">Oratória</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_HandShake.svg"
+              alt="Negociação"
+              class="icon"
+            />
+            <button class="button">Negociação</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_lamp.svg"
+              alt="Criatividade"
+              class="icon"
+            />
+            <button class="button">Criatividade</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_clock.svg"
+              alt="Produtividade"
+              class="icon"
+            />
 
-          <button class="button">Produtividade</button>
+            <button class="button">Produtividade</button>
+          </div>
         </div>
       </article>
     </section>
-<!-- <div class="banner">
+    <!-- <div class="banner">
       <img src="static/imgs/Image_22.svg" />
       <div class="apresentacao">
         <h1>Bem-vindo à Liberty Cursos</h1>
@@ -347,6 +374,5 @@
       </div>
     </div> -->
     {% include 'footer.html' %}
-
   </body>
 </html>
