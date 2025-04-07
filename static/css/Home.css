@@ -17,65 +17,6 @@
   padding: 0;
 } */
 
-/* Header e Navbar */
-.navbar {
-  background-color: var(--secondary-color);
-  padding: 10px 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.posi-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-  width: 100%;
-}
-
-.logo-navbar {
-  height: 50px;
-}
-
-.inputNavbar {
-  flex-grow: 1;
-  max-width: 300px;
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 2px solid var(--white);
-  background-color: var(--background-color);
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.inputNavbar:focus {
-  opacity: 1;
-  outline: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-.login,
-.cadastrar {
-  color: var(--white);
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 8px 12px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.login:hover,
-.cadastrar:hover {
-  background-color: var(--hover-color);
-  border-radius: 5px;
-}
 
 /* Banner */
 .banner {
@@ -213,76 +154,185 @@ hr {
   margin: 30px 0;
 }
 
-/* Footer */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 30px 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
+/* Reset básico */
+
+
+/* Seção principal */
+.courses-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
   text-align: center;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 200px;
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-.footer-title {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* Grid dos cursos */
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
 }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin: 8px 0;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: var(--white);
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-links a:hover {
-  color: var(--hover-color);
-}
-
-.logo-footer {
-  width: 120px;
-  margin-top: 10px;
-}
-
-.footer-icons a,
-.footer-social a {
-  margin: 5px;
-  display: inline-block;
-}
-
-.footer-icons img,
-.footer-social img {
-  width: 30px;
+/* Cartões de curso */
+.course-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
   transition: transform 0.3s ease-in-out;
 }
 
-.footer-icons img:hover,
-.footer-social img:hover {
-  transform: scale(1.1);
+.course-card:hover {
+  transform: translateY(-5px);
 }
 
-.footer-subtitle {
-  font-size: 18px;
-  margin-top: 15px;
+/* Imagens */
+.course-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.footer-copy {
-  font-size: 14px;
-  margin-top: 15px;
+/* Detalhes do curso */
+.course-details h2 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.course-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Avaliações */
+.course-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating-number {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.stars {
+  width: 20px;
+}
+
+/* Link estilizado */
+.course-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* Seção de ofertas */
+.offers-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Grid das ofertas */
+.offers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Cartões de oferta */
+.offer-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagens */
+.offer-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Detalhes da oferta */
+.offer-details h2 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.offer-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Avaliação */
+.offer-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating-number {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.stars {
+  width: 20px;
+}
+
+/* Preços */
+.offer-price {
+  margin-top: 10px;
+}
+
+.discount-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.original-price {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discount-text {
+  font-size: 0.9rem;
+  color: #d9534f;
+  font-weight: bold;
 }
