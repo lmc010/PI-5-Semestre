@@ -1,0 +1,537 @@
+/* Variáveis CSS */
+:root {
+  --primary-color: #7878ff;
+  --secondary-color: #d926d9;
+  --background-color: #f2f2f2;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #848484;
+  --hover-color: #d1d1f0;
+}
+
+/* Estilos Globais */
+body {
+  background-color: var(--background-color);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header e Navbar */
+/* Header e Navbar */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.posi-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Espaço entre os elementos */
+  gap: 20px;
+  width: 100%; /* Ocupa a largura total do header */
+}
+
+/* Logo */
+.logo-navbar {
+  height: 50px; /* Ajuste conforme necessário */
+}
+
+/* Input de pesquisa */
+.inputNavbar {
+  flex-grow: 1;
+  max-width: 300px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--white);
+  background-color: var(--background-color);
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.inputNavbar:focus {
+  opacity: 1;
+  outline: none;
+}
+
+/* Links de navegação */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.login,
+.cadastrar {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login:hover,
+.cadastrar:hover {
+  background-color: var(--hover-color);
+  border-radius: 5px;
+}
+
+/* Seção do vídeo */
+.sectionVideo {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 var(--spacing-unit);
+}
+
+.sectionVideo video {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Título e botões */
+.title {
+  max-width: 720px;
+  margin: 1.5rem auto;
+  padding: 0 var(--spacing-unit);
+  color: var(--secondary-color);
+  font-size: 1.8rem;  
+  margin-top: -100px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  padding: 0 var(--spacing-unit);
+}
+
+.buttonLike, .buttonDislike {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.buttonLike:hover {
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+.buttonDislike:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.buttonLike img, .buttonDislike img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Descrição */
+.descricao {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  padding: 0 var(--spacing-unit);
+}
+
+.descricao details {
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.descricao details[open] {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.descricao summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.descricao h3 {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.descricao p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/*Playlist */
+.playlist-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 66%;
+  margin-top: 20px;
+}
+
+.playlist-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+} 
+
+.playlist-button img {
+  width: 36px;
+  height: 36px;
+}
+
+.playlist-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 100;
+  display: none;
+}
+
+.playlist-panel.show {
+  display: block;
+}
+
+.playlist-header {
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+.playlist-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playlist-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.playlist-item:hover {
+  background-color: #f5f5f5;
+}
+
+.playlist-item.active {
+  background-color: #f0f0f0;
+}
+
+.playlist-thumbnail {
+  width: 60px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 2px;
+}
+
+.playlist-info {
+  flex: 1;
+}
+
+.playlist-title {
+  font-size: 14px;
+  margin: 0;
+}
+
+.playlist-duration {
+  font-size: 12px;
+  color: #666;
+  margin: 3px 0 0;
+}
+
+
+
+
+
+
+
+/* Comentários */
+.comments {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  padding: 0 var(--spacing-unit);
+}
+
+.comments h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.buttonComments {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.buttonComments:hover {
+  background-color: #d926d9;
+}
+
+.allComments {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.commentsOne {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.commentsOne:hover {
+  background-color: var(--light-gray);
+}
+
+.commentsOne img {
+  width: 100px;
+  height: 100px;
+  margin-left: -4%;
+
+}
+
+.commentsOne h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.3rem;
+  color: var(--secondary-color);
+}
+
+.commentsOne h3 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-top: 5%;
+  margin-left: -102px;
+  color: var(--text-color);
+}
+
+/* Footer melhorado */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: var(--hover-color);
+}
+
+.logo-footer {
+  width: 120px;
+  margin-top: 10px;
+}
+
+.footer-icons a,
+.footer-social a {
+  margin: 5px;
+  display: inline-block;
+}
+
+.footer-icons img,
+.footer-social img {
+  width: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-icons img:hover,
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-subtitle {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+
+  .playlist-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 74%;
+    margin-top: 20px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .posi-navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .inputNavbar {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .footer-section {
+    grid-template-columns: 1fr;
+  }
+
+  .playlist-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 79%;
+    margin-top: 20px;
+  }
+  
+}
+
+
+@media (max-width: 500px) {
+
+
+
+  .playlist-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 70%;
+    margin-top: 20px;
+  }
+
+  .title {  
+     margin-left: 2%;
+  }
+
+  .buttonLike {
+    margin-left: 1%;
+  }
+
+  .comments{
+    margin-left: 2%;
+  }
+
+  .comments h3{
+    margin-top: 7%;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  .playlist-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 66%;
+    margin-top: 20px;
+  }
+
+}
+
+@media (max-width: 330px) {
+
+  .playlist-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 62%;
+    margin-top: 20px;
+  }
+
+  .comments h3{
+    margin-top: 10%;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+  

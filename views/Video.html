@@ -7,49 +7,34 @@
     <link rel="stylesheet" href="static/css/Video.css" />
     <title>Video</title>
   </head>
+
+ 
   <body>
-    <div class="navbar">
-      <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
-      <div class="search-container">
-        <input type="text" placeholder="Pesquisar..." />
-      </div>
-      <div class="icons">
-        <img src="static/imgs/Image 17.svg" class="photo" />
-      </div>
-    </div>
+    <!--
+    <nav class="navbar">
+        <header class="navbar">
+            <div class="posi-navbar">
+              <img src="static/imgs/Logo_liberty.svg" alt="Logo Liberty" class="logo-navbar" />
+          
+              <input
+                type="text"
+                name="search"
+                placeholder="Digite Aqui..."
+                class="inputNavbar"
+                aria-label="Buscar"
+              />
+          
+              <nav class="nav-links">
+                <a href="/login" class="login">Login</a>
+                <a href="/cadastro" class="cadastrar">Cadastrar-se</a>
+              </nav>
+            </div>
+          </header>
+      </nav>
 
-    <nav class="menu" id="menu">
-      <div class="posiItensMenuNav">
-      <img class="logoMenu" src="static/imgs/Logo_liberty 1.svg" />
-      <ul>
-        <li>
-          <a href="/home">Home</a>
-        </li>
-        <li>
-          <a href="/perfil">Meu Perfil</a>
-        </li>
-        <li>
-          <a href="#">Meus Cursos</a>
-        </li>
-        <li>
-          <a href="#">Meus Certificados</a>
-        </li>
-        <li>
-          <a href="#">Suporte</a>
-        </li>
-        <li>
-          <a href="#">Configurações</a>
-        </li>
-        <li>
-          <a href="/">Fazer Logout</a>
-        </li>
-        <span class="close" onclick="toggleMenu()">
-          <img src="static/imgs/Icon_Exit.svg" width="20%" />
-        </span>
-      </ul>
-    </div>
-    </nav>
-
+    -->
+    
+  
     <section class="sectionVideo">
       <div>
         <video width="720" height="540" controls>
@@ -59,60 +44,91 @@
       </div>
       
     </section>
+    <br>
 
-    <div class="descricao">
-      <div class="posiBtnHeader">
-      <h1 class="titulo">Aula 1 - Introdução ao Html e CSS</h1>
-        <button id="toggleMenuButton" class="btnSidebar">
-          <img src="static/imgs/Icon_playlist.svg" alt="Playlist Icon" />
-        </button>
-
-        <nav class="sidebarMenuvideo">
-          <ul class="ul-sidebarMenuvideo">
-            <li class="nav-itemVideos">
-              <a href="#">Aula 1 - Apresentação do Curso</a>
-            </li>
-            <li class="nav-itemVideos">
-              <a href="#">Aula 2 - Conhecendo o Arduino</a>
-            </li>
-            <li class="nav-itemVideos">
-              <a href="#">Aula 3 - Botões e Chaves</a>
-            </li>
-            <li class="nav-itemVideos">
-              <a href="#">Aula 4 - Display de 7 Segmentos</a>
-            </li>
-            <li class="nav-itemVideos">
-              <a href="#">Aula 5 - Display LCD</a>
-            </li>
-            <li class="nav-itemVideos">
-              <a href="#">Aula 6 - Conclusão do Curso</a>
-            </li>
-          </ul>
-        </nav>
-    </div>
-      <div class="buttons">
-        <button>
-          <img src="static/imgs/Icon_Like.svg" alt="Like" />
-        </button>
-        <button>
-          <img src="static/imgs/Icon_Dislike.svg" alt="Dislike" />
-        </button>
+    <div class="playlist-container">
+      <button class="playlist-button" onclick="togglePlaylist()">
+        <img src="static/imgs/Icon_playlist.svg" alt="Playlist" />
+        Playlist
+      </button>
+      <div class="playlist-panel" id="playlistPanel">
+        <div class="playlist-header">Aulas do Curso</div>
+        <ul class="playlist-items">
+          <li class="playlist-item active">
+            <div class="playlist-thumbnail"></div>
+            <div class="playlist-info">
+              <p class="playlist-title">Aula 1 - Introdução ao Arduino</p>
+              <p class="playlist-duration">12:34</p>
+            </div>
+          </li>
+          <li class="playlist-item">
+            <div class="playlist-thumbnail"></div>
+            <div class="playlist-info">
+              <p class="playlist-title">Aula 2 - Componentes Básicos</p>
+              <p class="playlist-duration">15:20</p>
+            </div>
+          </li>
+          <li class="playlist-item">
+            <div class="playlist-thumbnail"></div>
+            <div class="playlist-info">
+              <p class="playlist-title">Aula 3 - Primeiro Circuito</p>
+              <p class="playlist-duration">18:45</p>
+            </div>
+          </li>
+          <li class="playlist-item">
+            <div class="playlist-thumbnail"></div>
+            <div class="playlist-info">
+              <p class="playlist-title">Aula 4 - Programação Básica</p>
+              <p class="playlist-duration">22:10</p>
+            </div>
+          </li>
+          <li class="playlist-item">
+            <div class="playlist-thumbnail"></div>
+            <div class="playlist-info">
+              <p class="playlist-title">Aula 5 - Projeto Prático</p>
+              <p class="playlist-duration">25:30</p>
+            </div>
+          </li>
+        </ul>
       </div>
+    </div>
+     
+    
 
-      <details>
-        <summary>Descrição da Aula</summary>
-        <div>
+  <h1 class="title">Aula 1 - Introdução ao Arduino</h1>
+
+  <div class="buttons">
+    <button class="buttonLike">
+     <img src="static/imgs/Icon_Like.svg" alt="Like" />
+    </button>
+    <button class="buttonDislike">
+     <img src="static/imgs/Icon_Dislike.svg" alt="Dislike" />
+    </button>
+  </div>
+
+
+
+        
+
+      <div class="descricao">
+        <details>
+         <summary>Descrição da Aula</summary>
+         <div>
           <h3>2562 Visualizações. 12/05/2024</h3>
           <p>
             Bem-vindos à nossa aula introdutória sobre Arduino! Nesta aula,
-            vamos explorar<br> os conceitos básicos do Arduino, aprender sobre sua
-            história e entender como<br> ele funciona.
+            vamos explorar os conceitos básicos<br> do Arduino, aprender sobre sua
+            história e entender como ele funciona.
           </p>
           <p>Email para Contato - tiagohenrique717@gmail.com</p>
           <p>Siga-me no Instagram - @proftiagohenrique</p>
-        </div>
-      </details>
+         </div>
+        </details>
     </div>
+
+  
+
+
 
     <div class="comments">
       <h1>Comentarios</h1>
@@ -127,55 +143,90 @@
       </div>
     </div>
 
-    <footer>
-      <div class="posiDivHeader">
-        <div class="divFooterOne">
-          <h1 class="footerh1">Tá com duvida?</h1>
-          <p class="footerp" href="#">Quem somos</p>
-          <img src="static/imgs/Logo_liberty 1.svg" class="logoFooter" />
+  
+
+
+
+
+
+
+
+
+    <footer class="footer">
+      <div class="footer-section">
+        <h1 class="footer-title">Tá com dúvida?</h1>
+        <nav>
+          <ul class="footer-links">
+            <li><a href="#">Quem somos?</a></li>
+          </ul>
+        </nav>
+        <img src="static/imgs/Logo_liberty.svg" alt="Logo Liberty" class="logo-footer" />
+      </div>
+    
+      <div class="footer-section">
+        <h1 class="footer-title">Quer saber mais?</h1>
+        <nav>
+          <ul class="footer-links">
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Trabalhe conosco</a></li>
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Configurações de cookie</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+      <div class="footer-section">
+        <h1 class="footer-title">Fale com a gente</h1>
+        <div class="footer-icons">
+          <a href="#"><img src="static/imgs/Icon_message.svg" alt="Mensagem" /></a>
+          <a href="#"><img src="static/imgs/Icon_whatsapp.svg" alt="WhatsApp" /></a>
         </div>
-        <div class="divFooterTwo">
-          <h1 class="footerTwoh1" href="#">Quer saber mais ?</h1>
-          <p class="footerTwop" href="#">Contato</p>
-          <p class="footerTwop" href="#">Trabalhe conosco</p>
-          <p class="footerTwop" href="#">Termos</p>
-          <p class="footerTwop" href="#">Politica de privacidade</p>
-          <p class="footerTwop" href="#">Configurações de cookie</p>
+    
+        <h2 class="footer-subtitle">Nossas Redes</h2>
+        <div class="footer-social">
+          <a href="#"><img src="static/imgs/Icon_instagram.svg" alt="Instagram" /></a>
+          <a href="#"><img src="static/imgs/Icon_youtube.svg" alt="YouTube" /></a>
         </div>
-        <div class="divFooterThree">
-          <div>
-            <h1 class="footerThreeh1">Fale com a gente</h1>
-            <div class="posiMidias">
-              <img src="static/imgs/Icon_message.svg" class="iconMessage" />
-              <img src="static/imgs/Icon_whatsapp.svg" class="iconWhatsapp" />
-            </div>
-          </div>
-          <h2 class="footerThreeh2">Nossas Redes</h2>
-          <div class="posiMidias">
-            <img src="static/imgs/Icon_instagram.svg" class="iconInstagram" />
-            <img src="static/imgs/Icon_youtube.svg" class="iconYoutube" />
-          </div>
-          <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
-        </div>
+    
+        <p class="footer-copy">© 2023 Liberty Cursos, Inc</p>
       </div>
     </footer>
 
-    <script>
-      function toggleMenu() {
-        var menu = document.getElementById("menu");
-        if (menu.classList.contains("open-menu")) {
-          menu.classList.remove("open-menu");
-        } else {
-          menu.classList.add("open-menu");
-        }
-      }
 
-      document
-        .getElementById("toggleMenuButton")
-        .addEventListener("click", function () {
-          var sidebar = document.querySelector(".sidebarMenuvideo");
-          sidebar.classList.toggle("show");
+
+  
+
+
+
+    <script>
+      function togglePlaylist() {
+        const panel = document.getElementById('playlistPanel');
+        panel.classList.toggle('show');
+      }
+      
+      // Fechar a playlist ao clicar fora
+      document.addEventListener('click', function(event) {
+        const playlistContainer = document.querySelector('.playlist-container');
+        const playlistButton = document.querySelector('.playlist-button');
+        const playlistPanel = document.getElementById('playlistPanel');
+        
+        if (!playlistContainer.contains(event.target) && !playlistButton.contains(event.target)) {
+          playlistPanel.classList.remove('show');
+        }
+      });
+      const playlistItems = document.querySelectorAll('.playlist-item');
+      playlistItems.forEach(item => {
+        item.addEventListener('click', function() {
+          playlistItems.forEach(i => i.classList.remove('active'));
+          this.classList.add('active');
+          // Aqui você pode adicionar a lógica para carregar o vídeo correspondente
         });
+      });
+
     </script>
+
   </body>
+
+  
 </html>
