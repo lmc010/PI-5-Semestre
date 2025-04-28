@@ -139,9 +139,6 @@ body {
     color: #ffffff;
 }
 
-.button-start a:hover {
-    color: red;
-}
 
 .buttonBuy {
     background-color: dodgerblue;
@@ -157,9 +154,6 @@ body {
     cursor: pointer;
 }
 
-.buttonBuy a:hover {
-    color: red;
-}
 
 .feedback {
     margin-left: 50px;
@@ -356,18 +350,18 @@ body {
 
     div .buttonStart {
         min-width: 35%;
-        max-width: 50%;
+        max-width: 45%;
         margin-top: 2%;
         margin-left: 36%;
-        padding-left: 80px; 
+        padding-left: 88px; 
     }
 
 
     div .buttonBuy {
         min-width: 35%;
-        max-width: 50%; 
+        max-width: 45%;
         margin-left: 36%;
-        padding-left: 95px;
+        padding-left: 100px;
     }
 
 
@@ -436,10 +430,84 @@ body {
         min-width: 35%;
         max-width: 50%; 
         margin-left: 30%;   
-        padding-left: 95px;
+        padding-left: 90px;
     }
 
 
 
 
 }
+
+
+@media (max-width: 450px) {
+
+  div .buttonStart {
+    min-width: 35%;
+    max-width: 50%;
+    margin-top: 2%;
+    margin-left: 28%;
+    padding-left: 70px;
+}
+
+
+div .buttonBuy {
+    min-width: 35%;
+    max-width: 50%; 
+    margin-left: 28%;   
+    padding-left: 80px;
+}
+
+}
+
+
+@media (max-width: 400px) {
+
+  div .buttonStart {
+    min-width: 35%;
+    max-width: 50%;
+    margin-top: -5%;
+    margin-left: 28%;
+    padding-left: 55px;
+}
+
+
+  div .buttonBuy {
+    min-width: 35%;
+    max-width: 50%; 
+    margin-left: 28%;   
+    padding-left: 65px;
+}
+
+}
+
+
+@media (max-width: 350px) {
+
+  .imagem img {
+    min-width: 95%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 500px;
+    margin-top: 5%;
+    margin-left: 7%;
+}
+
+  div .buttonStart {
+    min-width: 35%;
+    max-width: 60%;
+    margin-top: -10%;
+    margin-left: 25%;
+    padding-left: 55px;
+}
+
+
+  div .buttonBuy {
+    min-width: 35%;
+    max-width: 60%;
+    margin-left: 25%;
+    padding-left: 65px;
+}
+
+}
+
+
