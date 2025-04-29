@@ -22,15 +22,20 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/header.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
 
     <title>Home</title>
   </head>
 
   <body>
     {% include 'header.html' %}
-
 
     <section class="banner">
       <div class="banner-content">
@@ -63,20 +68,32 @@
         <h1 class="title">Trilha Hard Skills</h1>
 
         <div class="icons">
-          <img src="static/imgs/Icon_html.svg" alt="HTML" class="icon" />
-          <button class="button">Frontend</button>
-          <img src="static/imgs/icon_php.svg" alt="PHP" class="icon" />
-          <button class="button">Backend</button>
-          <img src="static/imgs/Icon_devops.svg" alt="DevOps" class="icon" />
-          <button class="button">DevOps</button>
-          <img
-            src="static/imgs/Icon_database.svg"
-            alt="Banco de Dados"
-            class="icon"
-          />
-          <button class="button">Data Science</button>
-          <img src="static/imgs/icon_design.svg" alt="Design" class="icon" />
-          <button class="button">Design</button>
+          <div class="posi-icons">
+            <img src="static/imgs/Icon_html.svg" alt="HTML" class="icon" />
+            <button class="button">Frontend</button>
+          </div>
+          <div class="posi-icons">
+            <img src="static/imgs/icon_php.svg" alt="PHP" class="icon" />
+            <button class="button">Backend</button>
+          </div>
+
+          <div class="posi-icons">
+            <img src="static/imgs/Icon_devops.svg" alt="DevOps" class="icon" />
+            <button class="button">DevOps</button>
+          </div>
+
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_database.svg"
+              alt="Banco de Dados"
+              class="icon"
+            />
+            <button class="button">Data Science</button>
+          </div>
+          <div class="posi-icons">
+            <img src="static/imgs/icon_design.svg" alt="Design" class="icon" />
+            <button class="button">Design</button>
+          </div>
         </div>
       </article>
 
@@ -86,267 +103,165 @@
         <h1 class="title">Trilha Soft Skills</h1>
 
         <div class="icons">
-          <img
-            src="static/imgs/Icon_comunication.svg"
-            alt="Comunicação"
-            class="icon"
-          />
-          <button class="button">Comunicação</button>
-          <img
-            src="static/imgs/Icon_megaphone.svg"
-            alt="Oratória"
-            class="icon"
-          />
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_comunication.svg"
+              alt="Comunicação"
+              class="icon"
+            />
+            <button class="button">Comunicação</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_megaphone.svg"
+              alt="Oratória"
+              class="icon"
+            />
 
-          <button class="button">Oratória</button>
-          <img
-            src="static/imgs/Icon_HandShake.svg"
-            alt="Negociação"
-            class="icon"
-          />
-          <button class="button">Negociação</button>
-          <img
-            src="static/imgs/Icon_lamp.svg"
-            alt="Criatividade"
-            class="icon"
-          />
-          <button class="button">Criatividade</button>
-          <img
-            src="static/imgs/Icon_clock.svg"
-            alt="Produtividade"
-            class="icon"
-          />
+            <button class="button">Oratória</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_HandShake.svg"
+              alt="Negociação"
+              class="icon"
+            />
+            <button class="button">Negociação</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_lamp.svg"
+              alt="Criatividade"
+              class="icon"
+            />
+            <button class="button">Criatividade</button>
+          </div>
+          <div class="posi-icons">
+            <img
+              src="static/imgs/Icon_clock.svg"
+              alt="Produtividade"
+              class="icon"
+            />
 
-          <button class="button">Produtividade</button>
+            <button class="button">Produtividade</button>
+          </div>
         </div>
       </article>
     </section>
-<!-- <div class="banner">
-      <img src="static/imgs/Image_22.svg" />
-      <div class="apresentacao">
-        <h1>Bem-vindo à Liberty Cursos</h1>
-
-        <p>
-          Aqui, você encontrará uma vasta gama de cursos online nas diversas
-          áreas<br />
-          de TI, ministrados por especialistas renomados. Nossa plataforma
-          oferece a<br />
-          flexibilidade e a conveniência de aprender no seu próprio ritmo, de
-          onde<br />
-          quer que esteja. Junte-se a uma comunidade vibrante de alunos e comece
-          a<br />
-          sua jornada de aprendizado hoje mesmo!"
-        </p>
-      </div>
-    </div>
-    <h1 class="hardSkills">TRILHA HARD SKILLS</h1>
-    <span class="questionMark">?</span>
-    <div class="hardSkillsBox">
-      Hard Skills são habilidades técnicas que podem ser aprendidas e medidas.
-      Exemplos incluem programação, design gráfico, análise de dados, e
-      habilidades específicas para realizar tarefas no seu campo profissional.
-      Elas são adquiridas por meio de educação formal, cursos, ou experiência
-      prática.
-    </div>
-    <div class="iconsHardSkills">
-      <img class="iconsHardSkillOne" src="static/imgs/Icon_html.svg" />
-      <img class="iconsHardSkillTwo" src="static/imgs/icon_php.svg" />
-      <img class="iconsHardSkillThree" src="static/imgs/Icon_devops.svg" />
-      <img class="iconsHardSkillFour" src="static/imgs/Icon_database.svg" />
-      <img class="iconsHardSkillFive" src="static/imgs/icon_design.svg" />
-    </div>
-    <button class="buttonHardSkillsOne">Frontend</button>
-    <button class="buttonHardSkillsTwo">Backend</button>
-    <button class="buttonHardSkillsThree">DevOps</button>
-    <button class="buttonHardSkillsFour">
-      Data <br />
-      Science
-    </button>
-    <button class="buttonHardSkillsFive">Design</button>
-    <hr class="hrSoftSkills" />
-    <h1 class="softSkills">TRILHA SOFT SKILLS</h1>
-    <span class="questionMarkTwo">?</span>
-    <div class="softSkillsBox">
-      Soft skills são habilidades interpessoais e comportamentais que facilitam
-      a interação e o trabalho em equipe, como comunicação, empatia,
-      adaptabilidade e liderança. Ao contrário das hard skills, que são técnicas
-      e específicas, as soft skills são habilidades subjetivas e transversais,
-      importantes em qualquer área profissional.
-    </div>
-    <div class="iconsSoftSkills">
-      <img class="iconsSoftSkillOne" src="static/imgs/Icon_comunication.svg" />
-      <img class="iconsSoftSkillTwo" src="static/imgs/Icon_megaphone.svg" />
-      <img class="iconsSoftSkillThree" src="static/imgs/Icon_HandShake.svg" />
-      <img class="iconsSoftSkillFour" src="static/imgs/Icon_lamp.svg" />
-      <img class="iconsSoftSkillFive" src="static/imgs/Icon_clock.svg" />
-    </div>
-    <div class="button-softSkills">
-      <button class="buttonSoftSkillsOne">Comunicação</button>
-      <button class="buttonSoftSkillsTwo">Oratória</button>
-      <button class="buttonSoftSkillsThree">Negociação</button>
-      <button class="buttonSoftSkillsFour">Criatividade</button>
-      <button class="buttonSoftSkillsFive">Produtividade</button>
-    </div>
-
-    <h1 class="h1-recomendados">Cursos Recomendados</h1>
-
-    <div class="cardsHardSkils">
-      <div class="cardOne">
-        <div class="card-img-one">
-          <img src="static/imgs/Image 3.svg" />
-        </div>
-        <div class="cardTextOne">
-          <h1>Java Completo 2024</h1>
-          <p>R$ 185,90</p>
-        </div>
-        <div class="cardStars">
-          <img src="static/imgs/Number_5.svg" class="rectangleNumber" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-        </div>
-      </div>
-
-      <div class="cardTwo">
-        <div class="card-img-two">
-          <img src="static/imgs/Image 4.svg" />
-        </div>
-        <div class="cardTextTwo">
-          <h1>NodeJs para Avançados<br /></h1>
-          <p>R$ 199,90</p>
-        </div>
-        <div class="cardStars">
-          <img src="static/imgs/Number_5.svg" class="rectangleNumber" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-        </div>
-      </div>
-
-      <a class="href" href="Curso.html">
-        <div class="cardThree">
-          <div class="card-img-three">
-            <img src="static/imgs/Image 5.svg" />
+    
+    <section class="courses-section">
+      <h1 class="section-title">Cursos Recomendados</h1>
+    
+      <div class="courses-container">
+        <article class="course-card">
+          <figure class="course-image">
+            <img src="static/imgs/Image 3.svg" alt="Curso de Java Completo 2024" />
+          </figure>
+          <div class="course-details">
+            <h2>Java Completo 2024</h2>
+            <p class="course-price">R$ 185,90</p>
+            <div class="course-rating">
+              <img src="static/imgs/Number_5.svg" alt="Nota 5" class="rating-number" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+            </div>
           </div>
-          <div class="cardTextThree">
-            <h1>Arduino Passo a Passo</h1>
-            <p>R$ 99,90</p>
+        </article>
+    
+        <article class="course-card">
+          <figure class="course-image">
+            <img src="static/imgs/Image 4.svg" alt="Curso de NodeJs para Avançados" />
+          </figure>
+          <div class="course-details">
+            <h2>NodeJs para Avançados</h2>
+            <p class="course-price">R$ 199,90</p>
+            <div class="course-rating">
+              <img src="static/imgs/Number_5.svg" alt="Nota 5" class="rating-number" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+            </div>
           </div>
-          <div class="cardStars">
-            <img src="static/imgs/Number_5.svg" class="rectangleNumber" />
-            <img src="static/imgs/Star.svg" class="stars" />
-            <img src="static/imgs/Star.svg" class="stars" />
-            <img src="static/imgs/Star.svg" class="stars" />
-            <img src="static/imgs/Star.svg" class="stars" />
-            <img src="static/imgs/Star.svg" class="stars" />
+        </article>
+    
+        <a href="Curso.html" class="course-link">
+          <article class="course-card">
+            <figure class="course-image">
+              <img src="static/imgs/Image 5.svg" alt="Curso de Arduino Passo a Passo" />
+            </figure>
+            <div class="course-details">
+              <h2>Arduino Passo a Passo</h2>
+              <p class="course-price">R$ 99,90</p>
+              <div class="course-rating">
+                <img src="static/imgs/Number_5.svg" alt="Nota 5" class="rating-number" />
+                <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+                <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+                <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+                <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+                <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+    
+    <section class="offers-section">
+      <h1 class="section-title">OFERTAS</h1>
+    
+      <div class="offers-container">
+        <article class="offer-card">
+          <figure class="offer-image">
+            <img src="static/imgs/Image 9.svg" alt="Curso de Desenvolvimento Web com React" />
+          </figure>
+          <div class="offer-details">
+            <h2>Desenvolvimento Web</h2>
+            <p>Aprenda React JS na prática, criando aplicações completas do ZERO ao avançado!</p>
+            <div class="offer-rating">
+              <img src="static/imgs/Number_5.svg" alt="Nota 5" class="rating-number" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+            </div>
+            <div class="offer-price">
+              <h3 class="discount-price">R$27,90</h3>
+              <h4 class="original-price">R$169,90</h4>
+              <p class="discount-text">Oferta de 84% de desconto</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="cardsSoftSkills">
-      <div class="cardFour">
-        <div class="card-img-four">
-          <img src="static/imgs/Image 6.svg" />
-        </div>
-        <div class="cardTextFour">
-          <h1>Curso de Oratoria</h1>
-          <p>R$ 59,90</p>
-        </div>
-        <div class="cardStars">
-          <img src="static/imgs/Number_5.svg" class="rectangleNumber" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-        </div>
+        </article>
+    
+        <article class="offer-card">
+          <figure class="offer-image">
+            <img src="static/imgs/Image 10.svg" alt="Curso de Colaboração em Equipe" />
+          </figure>
+          <div class="offer-details">
+            <h2>Como desenvolver a colaboração entre a equipe</h2>
+            <p>Aprenda a desenvolver e manter relações de trabalho colaborativas.</p>
+            <div class="offer-rating">
+              <img src="static/imgs/Number_4.svg" alt="Nota 4" class="rating-number" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+              <img src="static/imgs/Star.svg" alt="Estrela" class="stars" />
+            </div>
+            <div class="offer-price">
+              <h3 class="discount-price">R$27,90</h3>
+              <h4 class="original-price">R$169,90</h4>
+              <p class="discount-text">Oferta de 84% de desconto</p>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="cardFive">
-        <div class="card-img-five">
-          <img src="static/imgs/Image 7.svg" />
-        </div>
-        <div class="cardTextFive">
-          <h1>Tudo Sobre SoftSkills<br /></h1>
-          <p>R$ 99,90</p>
-        </div>
-        <div class="cardStars">
-          <img src="static/imgs/Number_4.svg" class="rectangleNumber" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-        </div>
-      </div>
-      <div class="cardSix">
-        <div class="card-img-six">
-          <img src="static/imgs/Image 8.svg" />
-        </div>
-        <div class="cardTextSix">
-          <h1>Comunicação Interlectual</h1>
-          <p>R$ 85,90</p>
-        </div>
-        <div class="cardStars">
-          <img src="static/imgs/Number_5.svg" class="rectangleNumber" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-          <img src="static/imgs/Star.svg" class="stars" />
-        </div>
-      </div>
-    </div>
-    <div>
-      <h1 class="ofertash1">OFERTAS</h1>
-
-      <div class="divReact">
-        <img src="static/imgs/Image 9.svg" />
-        <h1>Desenvolvimento Web</h1>
-        <p>
-          Aprenda React JS na pratica a criar aplicações completas do extremo
-          ZERO ao avançado!
-        </p>
-        <div class="reactImg">
-          <img src="static/imgs/Number_5.svg" class="numberReact" />
-          <img src="static/imgs/Star.svg" class="starsReact" />
-          <img src="static/imgs/Star.svg" class="starsReactTwo" />
-          <img src="static/imgs/Star.svg" class="starsReactThree" />
-          <img src="static/imgs/Star.svg" class="starsReactFour" />
-          <img src="static/imgs/Star.svg" class="starsReactFive" />
-        </div>
-
-        <h2>R$27,90</h2>
-        <h3>R$169,90</h3>
-        <h4>Oferta de 84% de desconto</h4>
-      </div>
-    </div>
-
-    <div>
-      <div class="divSoftSkills">
-        <img src="static/imgs/Image 10.svg" />
-        <h1 class="react-h1">Como desenvolver a colaboração entre a equipe</h1>
-        <p class="ofertas-p">
-          São abordados tópicos importantes para aprender a desenvolver e manter
-          relações de trabalho colaborativas.
-        </p>
-        <div class="softSkillsImg">
-          <img src="static/imgs/Number_4.svg" class="numberReact" />
-          <img src="static/imgs/Star.svg" class="starsReact" />
-          <img src="static/imgs/Star.svg" class="starsReactTwo" />
-          <img src="static/imgs/Star.svg" class="starsReactThree" />
-          <img src="static/imgs/Star.svg" class="starsReactFour" />
-        </div>
-        <br />
-        <h2>R$27,90</h2>
-        <h3>R$169,90</h3>
-        <h4>Oferta de 84% de desconto</h4>
-      </div>
-    </div> -->
+    </section>
+    
     {% include 'footer.html' %}
-
   </body>
 </html>
