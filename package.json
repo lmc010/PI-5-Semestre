@@ -1,7 +1,7 @@
 {
   "name": "pi-5-semestre",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este projeto utiliza Node.js e Python para desenvolvimento backend com Flask e gerenciamento de dependências com npm.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lmc010/PI-5-Semestre/issues"
   },
-  "homepage": "https://github.com/lmc010/PI-5-Semestre#readme"
+  "homepage": "https://github.com/lmc010/PI-5-Semestre#readme",
+  "dependencies": {
+    "flask": "^0.2.10"
+  }
 }
