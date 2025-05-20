@@ -1,18 +1,397 @@
 /* Variáveis CSS */
-/* :root {
-    --primary-color: #7878ff;
-    --secondary-color: #d926d9;
-    --background-color: #f2f2f2;
-    --white: #ffffff;
-    --black: #000000;
-    --gray: #848484;
-    --hover-color: #d1d1f0;
-  } */
-  
-  /* Estilos Globais */
-  /* body {
-    background-color: var(--background-color);
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-  } */
+:root {
+  --primary-color: #7878ff;
+  --secondary-color: #da7eda;
+  --background-color: #f2f2f2;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #848484;
+  --hover-color: #d1d1f0;
+}
+
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  gap: 20px;
+  max-width: 50vw;
+  min-height: 90vh;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+}
+
+.logo-section, .login-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.logo-section{
+  background-color: #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+#login-title {
+  font-size: 50px;
+  line-height: 1.6;
+  text-shadow: 
+  1px 1px 0 white;
+}
+
+.logo-section img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.login-section {
+  display: flex;
+  background-color: var(--secondary-color);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.interactive-buttons {
+  display: flex;
+  justify-content: center;
+
+}
+
+.interactive-buttons a{
+color: white;
+}
+
+.interactive-buttons a:hover{
+  color: #3498db;
+  text-decoration: underline;
+  text-shadow: 
+   1px  1px 0 var(--black);
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#login-form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+
+/* Header e Navbar */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posi-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+}
+
+.logo-navbar {
+  height: 50px;
+}
+
+.inputNavbar {
+  flex-grow: 1;
+  max-width: 300px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--white);
+  background-color: var(--background-color);
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.inputNavbar:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.login,
+.cadastrar {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login:hover,
+.cadastrar:hover {
+  background-color: var(--hover-color);
+  border-radius: 5px;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: var(--hover-color);
+}
+
+.logo-footer {
+  width: 120px;
+  margin-top: 10px;
+}
+
+.footer-icons a,
+.footer-social a {
+  margin: 5px;
+  display: inline-block;
+}
+
+.footer-icons img,
+.footer-social img {
+  width: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-icons img:hover,
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-subtitle {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+
+/*perfil*/
+
+.profile-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.profile-left, .profile-center, .profile-right {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+/*esquerda*/
+
+.profile-left {
+  max-width: 300px;
+  max-height: 100vh;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.return {
+  width: 50px;
+  max-width: 150px;
+  object-fit: cover;
+  display: block;
+  margin-left: 0;
+  transition: transform 0.4s ease;
+}
+
+.return:hover{
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.username {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.category {
+  color: #949494;
+  text-align: center;
+  margin-top: 0;
+}
+
+.nav-tools {
+  margin-top: 50px;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.nav-tools li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  color: #747474;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-tools li.actual-page {
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-tools li:not(.actual-page):hover {
+  color: #949494;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/*centro*/
+
+.carousel {
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+gap: 10px;
+padding-bottom: 10px;
+padding: 20px;
+max-width: 90%;
+}
+
+.badge {
+flex: 0 0 auto;
+scroll-snap-align: start;
+max-width: 200px;
+max-height: 200px;
+background: #eee;
+border-radius: 100px;
+overflow: hidden;
+white-space: nowrap;
+transition: transform 0.4s ease;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.home-profile {
+height: 60vh;
+background: #fff;
+margin-top: 20px;
+border-radius: 12px;
+border: 1px dashed #ccc;
+}
+
+/*direita*/
+
+.bio {
+margin-bottom: 30px;
+letter-spacing: 1px;
+}
+
+.right-title {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.right-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #952B95;
+  margin-top: 5px;
+}

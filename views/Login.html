@@ -1,51 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="static/css/login.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
-  <title>Login</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Liberty</title>
+  <link rel="stylesheet" href="static/css/Login.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <div>
-    <img src="static/imgs/Logo_liberty 2.svg" class="logo">
-    <h1>LIBERTY CURSOS</h1>
-    <p class="p1">Educação: A Chave para a Autonomia Feminina.</p>
-    <img src="static/imgs/Image 1.svg" class="img">
-    <p class="p2">Nosso compromisso é oferecer cursos de alta
-      qualidade e recursos educacionais acessíveis para<br> mulheres em situação de vulnerabilidade.
-      Através do aprendizado, queremos capacitar as mulheres a se<br> tornarem líderes de suas próprias vidas,
-      a alcançarem independência financeira e a construírem um futuro<br> melhor para si e para suas famílias.</p>
+  <div class="login-container">
+    <section class="logo-section">
+      <img src="static/imgs/Logo_liberty.svg" alt="Liberty Logo" class="login-logo" />
+    </section>
 
-  </div>
-  <div>
-    <form id="form" method="POST" action="{{url_for('perfil')}}">
-      <h1>Login:</h1>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" class="inputEmail" placeholder="Digite seu email">
+    <section class="login-section">
+      <h1 id="login-title">Bem-vindo de volta</h1>
+      <p class="login-subtitle">Faça login para acessar sua conta</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required />
+          <div class="error-message" id="email-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="••••••••" required />
+            <!-- <span class="toggle-password">👁️</span> -->
+          </div>
+          <div class="error-message" id="password-error"></div>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" id="remember" />
+            <span>Lembrar-me</span>
+          </label>
+          <a href="#" class="forgot-password">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit" class="login-button" disabled>Entrar</button>
+        
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+        </div>
+      </form>
+
+      <div class="divider">
+        <span>ou</span>
       </div>
-      <br>
-      <div>
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" name="password" class="inputPassword" placeholder="Digite seu senha">
+
+      <!-- <button class="social-login google-login">
+        <img src="static/imgs/google-icon.svg" alt="Google" />
+        Continuar com Google
+      </button> -->
+
+      <div class="signup-link">
+        <p>Não possui conta? <a href="#" onclick="toggleForm()">Cadastre-se</a></p>
       </div>
-      <div>
-        <button type="submit" class="entrar"><a href="/perfil" class="link">Entrar</a></button>
-      </div>
-      <br>
-      <div>
-        <input type="submit" class="cadastrar" value="Cadastrar">
-      </div>
-      <p>Esqueceu a senha ?</p>
-    </form>
+    </section>
   </div>
 </body>
-
 </html>
