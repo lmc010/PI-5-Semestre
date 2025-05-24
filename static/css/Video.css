@@ -44,25 +44,37 @@ body {
 
 .video-content {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
-  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  .video-content {
+    flex-direction: row;
+  }
 }
 
 .video-player-section {
   flex: 1;
-  min-width: 300px;
+  min-width: 0; /* Permite que o elemento encolha */
 }
 
 .playlist-sidebar {
-  width: 350px;
+  width: 100%;
   background: var(--white);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
-  position: sticky;
-  top: 20px;
-  max-height: 90vh;
-  overflow-y: auto;
+}
+
+@media (min-width: 992px) {
+  .playlist-sidebar {
+    width: 350px;
+    position: sticky;
+    top: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }
 
 /* Player de vídeo */
@@ -87,26 +99,39 @@ body {
 
 /* Informações do vídeo */
 .video-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--gray-dark);
   margin-bottom: 1.5rem;
   line-height: 1.3;
 }
 
+@media (min-width: 768px) {
+  .video-title {
+    font-size: 1.8rem;
+  }
+}
+
 .video-actions {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--gray-light);
 }
 
+@media (min-width: 576px) {
+  .video-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .action-buttons {
   display: flex;
   gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .action-btn {
@@ -120,6 +145,13 @@ body {
   cursor: pointer;
   transition: var(--transition);
   font-weight: 500;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 400px) {
+  .action-btn {
+    font-size: 1rem;
+  }
 }
 
 .action-btn i {
@@ -141,6 +173,7 @@ body {
   gap: 1.5rem;
   color: var(--gray-medium);
   font-size: 0.9rem;
+  flex-wrap: wrap;
 }
 
 .video-stats i {
@@ -171,6 +204,13 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 576px) {
+  .instructor-contact p {
+    font-size: 1rem;
+  }
 }
 
 .instructor-contact i {
@@ -188,9 +228,17 @@ body {
 
 .comments-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .comments-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .comments-header h2 {
@@ -212,6 +260,16 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.9rem;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 576px) {
+  .add-comment-btn {
+    width: auto;
+    font-size: 1rem;
+  }
 }
 
 .add-comment-btn:hover {
@@ -245,6 +303,13 @@ body {
   cursor: pointer;
   transition: var(--transition);
   font-weight: 500;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 576px) {
+  .comment-form-actions button {
+    font-size: 1rem;
+  }
 }
 
 .cancel-btn {
@@ -285,10 +350,17 @@ body {
 }
 
 .comment-avatar {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media (min-width: 576px) {
+  .comment-avatar {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .comment-content {
@@ -296,22 +368,43 @@ body {
 }
 
 .comment-author {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
   color: var(--gray-dark);
+}
+
+@media (min-width: 576px) {
+  .comment-author {
+    font-size: 1rem;
+  }
 }
 
 .comment-text {
   margin-bottom: 0.8rem;
   line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 576px) {
+  .comment-text {
+    font-size: 1rem;
+  }
 }
 
 .comment-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
   color: var(--gray-medium);
+}
+
+@media (min-width: 576px) {
+  .comment-actions {
+    font-size: 0.85rem;
+    gap: 1.5rem;
+  }
 }
 
 .comment-actions button {
@@ -349,7 +442,13 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 576px) {
+  .playlist-header h3 {
+    font-size: 1.2rem;
+  }
 }
 
 .playlist-count {
@@ -395,14 +494,22 @@ body {
 }
 
 .item-thumbnail {
-  width: 60px;
-  height: 40px;
+  width: 50px;
+  height: 35px;
   background: var(--gray-light);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--gray-medium);
+  flex-shrink: 0;
+}
+
+@media (min-width: 576px) {
+  .item-thumbnail {
+    width: 60px;
+    height: 40px;
+  }
 }
 
 .playlist-item.active .item-thumbnail {
@@ -417,17 +524,33 @@ body {
 
 .item-info {
   flex: 1;
+  min-width: 0; /* Permite que o texto quebre */
 }
 
 .item-title {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-bottom: 0.2rem;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 576px) {
+  .item-title {
+    font-size: 0.95rem;
+  }
 }
 
 .item-duration {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--gray-medium);
+}
+
+@media (min-width: 576px) {
+  .item-duration {
+    font-size: 0.8rem;
+  }
 }
 
 .item-status {
@@ -464,60 +587,11 @@ body {
 .progress-info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--gray-medium);
 }
 
-/* Responsividade */
-@media (max-width: 1200px) {
-  .video-content {
-    flex-direction: column;
-  }
-  
-  .playlist-sidebar {
-    width: 100%;
-    position: static;
-    order: -1;
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .video-title {
-    font-size: 1.5rem;
-  }
-  
-  .video-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .action-buttons {
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .action-btn {
-    flex: 1;
-    justify-content: center;
-  }
-  
-  .video-stats {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 480px) {
-  .video-title {
-    font-size: 1.3rem;
-  }
-  
-  .comment {
-    flex-direction: column;
-  }
-  
-  .comment-avatar {
-    align-self: flex-start;
-  }
+/* Classes utilitárias */
+.hidden {
+  display: none;
 }
